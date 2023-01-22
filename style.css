@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Odibee+Sans&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+html, body {
+    margin: 0;
+  }
+  
+  html {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
+  }
+ .game p {
+      position: absolute;
+      margin: 0;
+      top: 35px;
+      right: 5px;
+      color: #aaa;
+    }
+  body {
+    overflow: hidden;
+    height: inherit;
+  }
+  
+  .game h1 {
+    font-size: 2rem;
+    letter-spacing: -1px;
+    position: absolute;
+    margin: 0;
+    top: 5px;
+    right: 5px;
+  
+    color: transparent;
+    text-shadow: 0 0 4px white;
+  }
+  
+  
+body {
+  background-color: rgb(11, 11, 65);
+}
+.welcome {
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 400px;
+  height: 400px;
+  border: 1px solid rgb(70, 70, 243);
+  padding: 10px;
+}
+.welcome form p {
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.buttons {
+  margin: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Yes {
+  text-align: center;
+  background: #339900;
+  color: white;
+  font-size: 1.3rem;
+  font-family: "Merriweather";
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: 140px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+.No {
+  text-align: center;
+  background: #ffcc00;
+  color: white;
+  font-size: 1.3rem;
+  font-family: "Poppins";
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  width: 140px;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+
+.level {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  list-style: none;
+}
+.level-header {
+  color: blue;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.level-play {
+  text-align: center;
+  background: #339900;
+  color: white;
+  font-size: 1rem;
+  font-family: "Merriweather";
+  border-radius: 5px;
+  padding: 5px 20px 5px 20px;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: sans-serif;
+  border: none;
+}
