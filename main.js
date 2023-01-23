@@ -104,14 +104,14 @@ function init() {
                 displayAudio(request.result.audio, request.result.name);
             } else {
                 // Fetch the audios from the network
-                fetchAudioFromNetwork(audio);
+                fetchAudioFromNetwork(audio).then(()=>console.log('audio fetched'));
             }
         });
     }
 }
 
 
-function fetchAudioFromNetwork(audio) {
+async function fetchAudioFromNetwork(audio) {
     console.log('fetching audio from network');
     // Fetch the MP4 and WebM versions of the video using the fetch() function,
     // then expose their response bodies as blobs
