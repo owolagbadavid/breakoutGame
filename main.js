@@ -104,14 +104,14 @@ function init() {
                 displayAudio(request.result.audio, request.result.name);
             } else {
                 // Fetch the audios from the network
-                fetchAudioFromNetwork(audio).then(()=>console.log('audio fetched'));
+                fetchAudioFromNetwork(audio);
             }
         });
     }
 }
 
 
-async function fetchAudioFromNetwork(audio) {
+function fetchAudioFromNetwork(audio) {
     console.log('fetching audio from network');
     // Fetch the MP4 and WebM versions of the video using the fetch() function,
     // then expose their response bodies as blobs
@@ -119,10 +119,10 @@ async function fetchAudioFromNetwork(audio) {
 
     // Only run the next code when both promises have fulfilled
     audioBlob.then(values => {
-        // display the video fetched from the network with displayVideo()
-        displayAudio(values, audio.name);
         // store it in the IDB using storeVideo()
         storeAudio(values, audio.name);
+        // display the video fetched from the network with displayVideo()
+        displayAudio(values, audio.name);
     });
 }
 
@@ -160,7 +160,7 @@ function displayAudio(audioBlob, name) {
         gameAudio.style.display = 'none';
 
     }
-    if (name == 'gameover') {
+    else if (name == 'gameover') {
         gameOverAudio = document.createElement('audio');
 
         gameOverAudio.autoplay = false;
@@ -173,7 +173,7 @@ function displayAudio(audioBlob, name) {
         gameOverAudio.style.display = 'none';
 
     }
-    if (name == 'buttonclick') {
+    else if (name == 'buttonclick') {
         buttonClick = document.createElement('audio');
 
         buttonClick.autoplay = false;
